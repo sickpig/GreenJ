@@ -17,8 +17,8 @@ unix {
 	DESTDIR = ../bin/linux
 	LIBDIR = ../lib/linux
 	BUILDDIR = ../build/linux
-	PJSIP_DIR = ../lib/linux/pjsip
-	PJSIP_TARGET = i686-pc-linux-gnu
+	PJSIP_DIR = /usr/local/lib
+	PJSIP_TARGET = x86_64-unknown-linux-gnu
 }
 unix:!mac {
 	QT += phonon
@@ -86,6 +86,7 @@ unix: LIBS += -L/usr/lib/ \
 	-lm \
 	-lpthread \
 	-lasound \
+	-lopencore-amrnb \
 	-lssl \
 	#-luuid \
 	#-lcrypto \
